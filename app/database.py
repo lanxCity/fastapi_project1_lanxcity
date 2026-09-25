@@ -6,7 +6,9 @@ from .config import settings
 # postgresql://<username>:<password>@<ip addr/hostname>/<db_name>
 
 
-SQLALCHEMY_DB_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+# SQLALCHEMY_DB_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+
+SQLALCHEMY_DB_URL =settings.database_url
 
 # Create the connection engine
 engine = create_engine(SQLALCHEMY_DB_URL)

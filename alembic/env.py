@@ -14,7 +14,9 @@ from app.config import settings
 config = context.config
 
 # overriding the sql_url in the ini file
-config.set_main_option("sqlalchemy.url", f"postgresql+psycopg://{settings.database_username}:{settings.database_password}@{settings.database_hostname}/{settings.database_name}")
+# config.set_main_option("sqlalchemy.url", f"postgresql+psycopg://{settings.database_username}:{settings.database_password}@{settings.database_hostname}/{settings.database_name}")
+
+config.set_main_option("sqlalchemy.url", settings.database_url)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
