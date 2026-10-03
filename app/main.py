@@ -39,7 +39,7 @@ app.include_router(vote.router)
 
 @app.get('/')
 def root():
-    return {'message': 'Welcome to fastapi!!!'}
+    return {'message': 'Welcome to fastapi I am Lanx'}
 
 
 
